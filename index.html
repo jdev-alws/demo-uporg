@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UttarPradesh.org | निष्पक्ष और निर्भीक समाचार | Foxiz Capital Edition</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="उत्तर प्रदेश की ताजा खबरें, राजनीतिक विश्लेषण, वर्तमान विधायक, सांसद, पंचायत चुनाव 2026 और ग्राउंड रिपोर्ट। Foxiz Capital प्रेरित आधुनिक न्यूज़ पोर्टल।">
+  <meta name="keywords" content="Uttar Pradesh News, UP Politics, MLAs, MPs, Panchayat Election 2026, Akhilesh Yadav, Yogi Adityanath, UP News Live">
+  <meta name="author" content="UttarPradesh.org">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP UTILITY BAR
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="live-badge-mini">
+          <span class="live-pulse"></span> लाइव
+        </span>
+        <div class="top-location-date">
+          <span>📍 लखनऊ, उत्तर प्रदेश</span>
+          <span class="dot-sep"></span>
+          <span>बुधवार, 30 सितंबर 2026</span>
+        </div>
+      </div>
+      
+      <div class="top-bar-right">
+        <div class="top-trending-links">
+          <span class="top-trending-label">ट्रेंडिंग:</span>
+          <a href="#assembly-2027" class="trending-tag">#UP2027</a>
+          <a href="#panchayat-section" class="trending-tag">#पंचायत_चुनाव</a>
+          <a href="#politicians-section" class="trending-tag">#विधायक_सफर</a>
+          <a href="#video-lounge" class="trending-tag">#वीडियो_बुलेटिन</a>
+        </div>
+        <div class="top-socials">
+          <a href="#" class="social-icon-btn" aria-label="Facebook" title="Facebook">FB</a>
+          <a href="#" class="social-icon-btn" aria-label="X Twitter" title="X (Twitter)">𝕏</a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN SITE HEADER (Foxiz Capital Logo Center)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Left: Hamburger & Main Navigation -->
+      <div class="header-left">
+        <button class="icon-btn" id="hamburger-menu-btn" aria-label="मेनू खोलें" title="मेनू">
+          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+        </button>
+        <nav class="header-nav" aria-label="मुख्य नेविगेशन">
+          <a href="#hero-section" class="nav-link active">होम</a>
+          <a href="#up-news" class="nav-link">उत्तर प्रदेश</a>
+          <a href="#politicians-section" class="nav-link">जनप्रतिनिधि</a>
+          <a href="#video-lounge" class="nav-link">वीडियो</a>
+        </nav>
+      </div>
+
+      <!-- Center: UttarPradesh.org Brand Logo -->
+      <div class="header-center">
+        <a href="index.html" class="brand-logo-link" title="UttarPradesh.org Home">
+          <!-- Light Mode Logo -->
+          <img src="uplogo.svg" alt="UttarPradesh.org Logo" class="brand-logo logo-light">
+          <!-- Dark Mode Logo -->
+          <img src="logo-white.svg" alt="UttarPradesh.org Logo" class="brand-logo logo-dark">
+        </a>
+      </div>
+
+      <!-- Right: Search, Bookmarks, Theme Toggle & Newsletter -->
+      <div class="header-right">
+        <!-- Live Search Trigger -->
+        <button class="icon-btn" id="search-modal-trigger" aria-label="सर्च करें" title="सर्च">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+        </button>
+
+        <!-- Saved Bookmarks Drawer Trigger -->
+        <button class="icon-btn" id="saved-articles-trigger" aria-label="सहेजे गए लेख" title="सहेजे गए लेख">
+          <svg viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path></svg>
+          <span class="badge-count" id="bookmark-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="थीम बदलें" title="थीम बदलें">
+          <svg viewBox="0 0 24 24"><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg>
+        </button>
+
+        <!-- Newsletter CTA Pill -->
+        <a href="#newsletter-section" class="newsletter-pill-btn">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          <span>सदस्यता लें</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECONDARY CATEGORY NAVIGATION STRIP
+       ========================================================================== -->
+  <nav class="category-subnav" aria-label="श्रेणी नेविगेशन">
+    <div class="container">
+      <ul class="subnav-list">
+        <li class="subnav-item active"><a href="#hero-section">ताजा खबरें</a></li>
+        <li class="subnav-item"><a href="#up-news">उत्तर प्रदेश</a></li>
+        <li class="subnav-item"><a href="#politicians-section">वर्तमान विधायक (MLAs)</a></li>
+        <li class="subnav-item"><a href="#politicians-section">सांसद 2024 (MPs)</a></li>
+        <li class="subnav-item"><a href="#politicians-section">विधायकों का राजनीतिक सफर</a></li>
+        <li class="subnav-item"><a href="#panchayat-section">पंचायत चुनाव 2026</a></li>
+        <li class="subnav-item"><a href="#special-reports">विशेष रिपोर्ट</a></li>
+        <li class="subnav-item highlight"><a href="#assembly-2027">विधानसभा 2027</a></li>
+        <li class="subnav-item"><a href="#video-lounge">वीडियो बुलेटिन</a></li>
+        <li class="subnav-item"><a href="#newsletter-section">ई-न्यूज़लेटर</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       BREAKING NEWS TICKER
+       ========================================================================== -->
+  <div class="breaking-ticker-wrap">
+    <div class="container ticker-flex">
+      <div class="ticker-badge">
+        <span class="live-pulse"></span>
+        <span>ब्रेकिंग न्यूज़</span>
+      </div>
+      <div class="ticker-marquee-box">
+        <div class="ticker-content" id="ticker-content-track">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+      <div class="ticker-controls">
+        <button class="ticker-ctrl-btn" id="ticker-prev" title="पिछली खबर">‹</button>
+        <button class="ticker-ctrl-btn" id="ticker-next" title="अगली खबर">›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN HERO SECTION: FOXIZ 3-COLUMN NEWSPAPER GRID
+       ========================================================================== -->
+  <main class="site-main" id="hero-section">
+    <div class="container">
+      <div class="hero-newspaper-grid">
+        <!-- Column 1: Main Feature & Sub-cards (50%) -->
+        <div class="hero-col-main" id="hero-main-column">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Column 2: Ground Reports Stacked (28%) -->
+        <div class="hero-col-center" id="hero-center-column">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Column 3: Trending / Most Popular (22%) -->
+        <div class="hero-col-trending" id="hero-trending-column">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       ROTATING BANNER / EDITORIAL SPOTLIGHT (Foxiz Capital Style)
+       ========================================================================== -->
+  <section class="editorial-spotlight-banner">
+    <div class="container spotlight-inner">
+      <div class="spotlight-sub">उत्तर प्रदेश का सबसे प्रामाणिक डिजिटल मंच</div>
+      <h2 class="spotlight-quote serif-heading">
+        UttarPradesh.org — जनता की आवाज, <br>
+        <span class="spotlight-rotating-text" id="rotating-keyword">निष्पक्ष समाचार</span>
+      </h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 620px; margin: 0 auto;">
+        उत्तर प्रदेश के 75 जनपदों की जमीनी हकीकत, विधानसभा एवं लोकसभा जनप्रतिनिधियों की कार्यप्रणाली और विश्वसनीय विश्लेषण।
+      </p>
+      <div class="spotlight-buttons">
+        <a href="#politicians-section" class="btn-primary">जनप्रतिनिधि खोजें →</a>
+        <a href="#newsletter-section" class="btn-outline">न्यूज़लेटर प्राप्त करें</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: POLITICIANS DIRECTORY (MLAs & MPs Showcase)
+       ========================================================================== -->
+  <section class="politicians-section" id="politicians-section">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="block-title">
+          <span class="indicator"></span> यूपी के जनप्रतिनिधि (MLAs & MPs Showcase)
+        </h2>
+        <a href="javascript:void(0)" class="block-view-all" onclick="renderPoliticians('all')">
+          सभी देखें <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg>
+        </a>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="tab-filter-bar">
+        <button class="filter-tab active" data-filter="all">सभी जनप्रतिनिधि</button>
+        <button class="filter-tab" data-filter="sp">समाजवादी पार्टी (सपा)</button>
+        <button class="filter-tab" data-filter="bjp">भारतीय जनता पार्टी (भाजपा)</button>
+        <button class="filter-tab" data-filter="mla">वर्तमान विधायक (MLAs)</button>
+        <button class="filter-tab" data-filter="mp">लोकसभा सांसद (MPs)</button>
+      </div>
+
+      <!-- Politicians Cards Grid -->
+      <div class="politician-grid" id="politicians-grid-container">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: UP GROUND REPORTS (Quad Grid)
+       ========================================================================== -->
+  <section class="up-news-section" id="up-news">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="block-title">
+          <span class="indicator"></span> उत्तर प्रदेश: जनपदों से सीधी पड़ताल
+        </h2>
+        <a href="#up-news" class="block-view-all">
+          विस्तार से <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg>
+        </a>
+      </div>
+
+      <div class="quad-grid" id="up-ground-reports-grid">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: VIDEO LOUNGE (Foxiz Dark Theme Section)
+       ========================================================================== -->
+  <section class="video-lounge-section" id="video-lounge">
+    <div class="container">
+      <div class="block-heading">
+        <h2 class="block-title">
+          <span class="indicator"></span> डिजिटल वीडियो बुलेटिन व कवरेज
+        </h2>
+        <span style="color: #888; font-size: 0.8125rem;">विशेष साक्षात्कार एवं वीडियो रिपोर्ट्स</span>
+      </div>
+
+      <div class="video-lounge-grid">
+        <!-- Featured Main Video Player -->
+        <div id="main-video-slot">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Video Playlist Cards -->
+        <div class="video-playlist-col" id="video-playlist-slot">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: PANCHAYAT 2026 & SPECIAL REPORTS (Split Layout)
+       ========================================================================== -->
+  <section class="container" id="panchayat-section">
+    <div class="panchayat-special-grid">
+      <!-- Left Column: Panchayat Elections 2026 -->
+      <div>
+        <div class="block-heading">
+          <h2 class="block-title">
+            <span class="indicator"></span> पंचायत चुनाव 2026: वोटर लिस्ट अपडेट
+          </h2>
+          <span class="category-tag red">अंतिम प्रकाशन</span>
+        </div>
+        <div class="panchayat-voter-list" id="panchayat-voter-data">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Right Column: Special Reports & Analysis -->
+      <div id="special-reports">
+        <div class="block-heading">
+          <h2 class="block-title">
+            <span class="indicator"></span> विशेष रिपोर्ट: चुनावी व सियासी समीकरण
+          </h2>
+          <a href="#special-reports" class="block-view-all">आर्काइव</a>
+        </div>
+        <div class="special-report-box">
+          <article class="special-lead-card">
+            <div class="special-lead-thumb" onclick="openArticleModal('political-families-75-districts')" style="cursor: pointer;">
+              <img src="https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg" alt="75 जिलों में सियासी विरासत" onerror="this.src='favicon.jpeg'">
+            </div>
+            <div class="special-lead-body">
+              <span class="category-tag blue">इन्वेस्टिगेशन</span>
+              <h3 onclick="openArticleModal('political-families-75-districts')" style="cursor: pointer;">
+                उत्तर प्रदेश के राजनीतिक परिवार: 75 जिलों में सियासी विरासत की बड़ी पड़ताल
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5;">
+                पूरब से पश्चिम और अवध से बुंदेलखंड तक, उत्तर प्रदेश के 75 जनपदों में किन-किन राजनीतिक घरानों का वर्चस्व आज भी कायम है?
+              </p>
+              <div class="post-meta" style="margin-top: 10px;">
+                <span>रिसर्च टीम, UP Org</span>
+                <span class="dot-sep"></span>
+                <span>7 मिनट पठन</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: ASSEMBLY ELECTIONS 2027 ANALYSIS
+       ========================================================================== -->
+  <section class="container" id="assembly-2027" style="padding: 20px 20px 40px;">
+    <div class="block-heading">
+      <h2 class="block-title">
+        <span class="indicator"></span> विधानसभा चुनाव 2027: चुनावी रण
+      </h2>
+      <span class="category-tag gold">सियासी विश्लेषण</span>
+    </div>
+
+    <div class="quad-grid">
+      <article class="quad-card">
+        <div class="quad-thumb" onclick="openArticleModal('assembly-2027-update')" style="cursor: pointer;">
+          <img src="https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/05/02085707/AKHILESH-YADAV-768x432.webp" alt="UP Assembly 2027" onerror="this.src='favicon.jpeg'">
+        </div>
+        <span class="category-tag red">विधानसभा 2027</span>
+        <h3 class="quad-title" onclick="openArticleModal('assembly-2027-update')" style="cursor: pointer;">
+          UP Assembly Election 2027: जनगणना के बावजूद समय पर होंगे यूपी चुनाव?
+        </h3>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">
+          चुनाव आयोग ने स्पष्ट किया है कि परिसीमन का निर्धारित चुनावी कैलेंडर पर कोई प्रभाव नहीं पड़ेगा।
+        </p>
+      </article>
+
+      <article class="quad-card">
+        <div class="quad-thumb" onclick="openArticleModal('rajya-sabha-election-up')" style="cursor: pointer;">
+          <img src="https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/04/01191919/akshay_yadav-149x203.jpg" alt="Rajya Sabha Seats" onerror="this.src='favicon.jpeg'">
+        </div>
+        <span class="category-tag blue">राज्यसभा 2026</span>
+        <h3 class="quad-title" onclick="openArticleModal('rajya-sabha-election-up')" style="cursor: pointer;">
+          UP Rajya Sabha Election 2026: यूपी की 10 सीटों पर BJP-SP में बड़ा मुकाबला
+        </h3>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">
+          2027 से पहले बनेगा सियासी सेमीफाइनल, क्रॉस वोटिंग को लेकर सरगर्मी।
+        </p>
+      </article>
+
+      <article class="quad-card">
+        <div class="quad-thumb" onclick="openArticleModal('sp-mla-sudhakar-singh')" style="cursor: pointer;">
+          <img src="https://www.uttarpradesh.org/wp-content/uploads/2025/08/mla01.jpeg" alt="Rohini Ghavri Akhilesh Yadav" onerror="this.src='favicon.jpeg'">
+        </div>
+        <span class="category-tag gold">समीकरण</span>
+        <h3 class="quad-title" onclick="openArticleModal('sp-mla-sudhakar-singh')" style="cursor: pointer;">
+          रोहिणी घावरी व अखिलेश यादव मुलाकात: 21 सीटों पर वाल्मीकि राजनीति का प्लान?
+        </h3>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">
+          दलित राजनीति में नए समीकरण साधने की कवायद तेज।
+        </p>
+      </article>
+
+      <article class="quad-card">
+        <div class="quad-thumb" onclick="openArticleModal('jalaun-water-award')" style="cursor: pointer;">
+          <img src="https://www.uttarpradesh.org/wp-content/uploads/2025/08/mla03.jpeg" alt="Robertsganj UP Assembly" onerror="this.src='favicon.jpeg'">
+        </div>
+        <span class="category-tag red">सीट समीक्षा</span>
+        <h3 class="quad-title" onclick="openArticleModal('jalaun-water-award')" style="cursor: pointer;">
+          रॉबर्ट्सगंज विधानसभा चुनाव 2027: ताज़ा अपडेट, इतिहास और तुलनात्मक विश्लेषण
+        </h3>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;">
+          2007 से 2022 तक के वोटिंग पैटर्न और आगामी त्रिकोणीय मुकाबले की रिपोर्ट।
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: NEWSLETTER SUBSCRIPTION (Foxiz Capital Style)
+       ========================================================================== -->
+  <section class="newsletter-subscribe-section" id="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <svg class="newsletter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        <h2 class="newsletter-title serif-heading">सुबह की पहली चाय, उत्तर प्रदेश की सच्ची खबरों के साथ</h2>
+        <p class="newsletter-desc">
+          प्रतिदिन सुबह 7 बजे उत्तर प्रदेश के राजनीतिक घटनाक्रम, विधानसभा विश्लेषण और जिलेवार मुख्य समाचार सीधे अपने इनबॉक्स में पाएं।
+        </p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email-input" class="newsletter-input" placeholder="अपना ईमेल पता दर्ज करें..." required>
+          <button type="submit" class="newsletter-btn">निःशुल्क सब्सक्राइब करें</button>
+        </form>
+        <div class="newsletter-disclaimer">
+          🔒 हम आपकी निजता का सम्मान करते हैं। कोई स्पैम नहीं, कभी भी अनसब्सक्राइब करें।
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (Foxiz Deep Editorial Layout)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About -->
+        <div class="footer-col-about">
+          <img src="logo-white.svg" alt="UttarPradesh.org" class="footer-logo">
+          <p style="line-height: 1.6; color: #9da6b7;">
+            <strong>UttarPradesh.org</strong> उत्तर प्रदेश की राजनीति, जनप्रतिनिधियों की कार्यप्रणाली, जनसमस्याओं और सांस्कृतिक धरोहर को समर्पित एक स्वतंत्र डिजिटल मीडिया संस्थान है।
+          </p>
+          <div style="display: flex; gap: 12px; margin-top: 8px;">
+            <a href="#" class="social-icon-btn" style="color: #fff;">Facebook</a>
+            <span style="color: #444;">•</span>
+            <a href="#" class="social-icon-btn" style="color: #fff;">Twitter / 𝕏</a>
+            <span style="color: #444;">•</span>
+            <a href="#" class="social-icon-btn" style="color: #fff;">YouTube</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Categories -->
+        <div>
+          <h3 class="footer-col-heading">प्रमुख श्रेणियाँ</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#hero-section">ताजा समाचार</a></li>
+            <li><a href="#up-news">उत्तर प्रदेश हलचल</a></li>
+            <li><a href="#politicians-section">वर्तमान विधायक</a></li>
+            <li><a href="#politicians-section">लोकसभा सांसद</a></li>
+            <li><a href="#panchayat-section">पंचायत चुनाव 2026</a></li>
+            <li><a href="#assembly-2027">विधानसभा 2027</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Political Journey -->
+        <div>
+          <h3 class="footer-col-heading">विशेष स्तम्भ</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#special-reports">75 जिलों की सियासी विरासत</a></li>
+            <li><a href="#politicians-section">विधायकों का राजनीतिक सफर</a></li>
+            <li><a href="#video-lounge">वीडियो ग्राउंड रिपोर्ट</a></li>
+            <li><a href="#panchayat-section">वोटर लिस्ट विश्लेषण</a></li>
+            <li><a href="#newsletter-section">संपादकीय एवं विचार</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office -->
+        <div>
+          <h3 class="footer-col-heading">संपादकीय कार्यालय</h3>
+          <p style="color: #9da6b7; line-height: 1.6;">
+            गोमती नगर, लखनऊ, उत्तर प्रदेश - 226010<br>
+            <strong>ईमेल:</strong> editor@uttarpradesh.org<br>
+            <strong>हेल्पलाइन:</strong> +91 522 234XXXX
+          </p>
+          <div style="margin-top: 14px; background: rgba(255,255,255,0.05); padding: 10px; border-radius: 4px; border-left: 2px solid var(--accent-red);">
+            <small style="color: #aaa;">RNI & Digital Media Ethics Code 2021 के दिशा-निर्देशों का अनुपालन।</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>UttarPradesh.org</strong>. सर्वाधिकार सुरक्षित। Foxiz Capital Style Demo.
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#" style="color: #727a8a;">गोपनीयता नीति</a>
+          <a href="#" style="color: #727a8a;">नियम एवं शर्तें</a>
+          <a href="#" style="color: #727a8a;">संपादकीय नीति</a>
+          <a href="#" style="color: #727a8a;">शिकायत निवारण</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & DRAWERS
+       ========================================================================== -->
+
+  <!-- Backdrop Overlay -->
+  <div class="modal-overlay" id="drawer-backdrop-overlay"></div>
+
+  <!-- 1. Offcanvas Left Navigation Drawer -->
+  <aside class="offcanvas-drawer offcanvas-left" id="offcanvas-menu-drawer" aria-label="नेविगेशन मेनू">
+    <div class="drawer-header">
+      <img src="uplogo.svg" alt="UttarPradesh.org Logo" style="height: 36px;" class="logo-light">
+      <img src="logo-white.svg" alt="UttarPradesh.org Logo" style="height: 36px;" class="logo-dark">
+      <button class="modal-close-btn" id="close-menu-drawer" aria-label="बंद करें">✕</button>
+    </div>
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item"><a href="#hero-section" onclick="document.getElementById('close-menu-drawer').click();"><span>ताजा खबरें</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#up-news" onclick="document.getElementById('close-menu-drawer').click();"><span>उत्तर प्रदेश हलचल</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#politicians-section" onclick="document.getElementById('close-menu-drawer').click();"><span>यूपी के वर्तमान विधायक</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#politicians-section" onclick="document.getElementById('close-menu-drawer').click();"><span>यूपी सांसद 2024</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#panchayat-section" onclick="document.getElementById('close-menu-drawer').click();"><span>पंचायत चुनाव 2026</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#special-reports" onclick="document.getElementById('close-menu-drawer').click();"><span>विशेष रिपोर्ट्स</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#assembly-2027" onclick="document.getElementById('close-menu-drawer').click();"><span>विधानसभा चुनाव 2027</span> <span>→</span></a></li>
+        <li class="drawer-nav-item"><a href="#video-lounge" onclick="document.getElementById('close-menu-drawer').click();"><span>वीडियो गैलरी</span> <span>→</span></a></li>
+      </ul>
+
+      <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-light);">
+        <h4 style="font-size: 0.875rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 12px;">फॉलो करें</h4>
+        <div style="display: flex; gap: 14px;">
+          <a href="#" class="social-icon-btn">Facebook</a>
+          <a href="#" class="social-icon-btn">Twitter</a>
+          <a href="#" class="social-icon-btn">YouTube</a>
+          <a href="#" class="social-icon-btn">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Offcanvas Right Bookmarks Drawer -->
+  <aside class="offcanvas-drawer offcanvas-right" id="bookmarks-drawer" aria-label="सहेजे गए लेख">
+    <div class="drawer-header">
+      <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">📑 सहेजे गए लेख</h3>
+      <button class="modal-close-btn" id="close-bookmarks-drawer" aria-label="बंद करें">✕</button>
+    </div>
+    <div class="drawer-body" id="saved-articles-container">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- 3. Live Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="search-modal-box">
+      <div class="search-header">
+        <svg style="width: 22px; height: 22px; color: var(--text-light);" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+        </svg>
+        <input type="text" id="main-search-input" class="search-input-field" placeholder="खबरें, विधायक, सांसद या जिला खोजें..." autocomplete="off">
+        <button class="modal-close-btn" id="close-search-modal">✕</button>
+      </div>
+      <div class="search-results-area" id="search-results-list">
+        <div style="text-align: center; color: var(--text-light); padding: 30px;">
+          शीर्षक, जनपद (जैसे: जालौन, मऊ, वाराणसी) अथवा राजनेता का नाम टाइप करें...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Article Full Reading Modal -->
+  <div class="modal-overlay" id="article-reader-modal">
+    <div class="reader-modal-box">
+      <div class="reader-header">
+        <span id="modal-article-category" class="category-tag red">ताजा खबर</span>
+        <div class="reader-tools">
+          <span style="font-size: 0.75rem; color: var(--text-light); margin-right: 4px;">फॉन्ट:</span>
+          <button class="font-size-btn" onclick="adjustReaderFontSize(-2)" title="फॉन्ट छोटा करें">A-</button>
+          <button class="font-size-btn" onclick="adjustReaderFontSize(2)" title="फॉन्ट बड़ा करें">A+</button>
+          <button class="bookmark-btn" id="modal-bookmark-toggle" title="सहेजें">
+            <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          </button>
+          <button class="modal-close-btn" onclick="closeArticleModal()" title="बंद करें">✕</button>
+        </div>
+      </div>
+
+      <div class="reader-scrollable">
+        <h1 class="reader-title serif-heading" id="modal-article-title">लेख का शीर्षक</h1>
+        <div class="post-meta" id="modal-article-meta"></div>
+        <img src="" id="modal-article-img" class="reader-featured-img" alt="Article banner">
+        <div class="reader-body-text" id="modal-article-content"></div>
+
+        <div style="margin-top: 24px;" id="modal-article-tags"></div>
+
+        <!-- Social Share Bar -->
+        <div class="reader-share-row">
+          <span style="font-weight: 700; font-size: 0.875rem;">शेयर करें:</span>
+          <button class="btn-outline" style="padding: 6px 14px; font-size: 0.8125rem;" onclick="shareStory('whatsapp')">WhatsApp पर भेजें</button>
+          <button class="btn-outline" style="padding: 6px 14px; font-size: 0.8125rem;" onclick="shareStory('twitter')">𝕏 (Twitter)</button>
+          <button class="btn-outline" style="padding: 6px 14px; font-size: 0.8125rem;" onclick="shareStory('copy')">लिंक कॉपी करें</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Video Player Modal -->
+  <div class="modal-overlay" id="video-modal">
+    <div class="search-modal-box" style="max-width: 760px; background: #000; color: #fff;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid #222;">
+        <span style="font-size: 0.875rem; color: var(--accent-red); font-weight: 700;">डिजिटल वीडियो प्लेयर</span>
+        <button class="modal-close-btn" style="color: #fff;" onclick="closeVideoModal()">✕</button>
+      </div>
+      <div style="position: relative; aspect-ratio: 16 / 9; background: #111;">
+        <img id="video-player-img" src="" alt="Video thumbnail" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="play-overlay-btn" style="pointer-events: none;">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+        </div>
+      </div>
+      <div style="padding: 20px;">
+        <h3 id="video-modal-title" style="font-size: 1.15rem; color: #fff; margin-bottom: 8px;">वीडियो शीर्षक</h3>
+        <p id="video-modal-desc" style="color: #aaa; font-size: 0.875rem; line-height: 1.5;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back-to-Top Button -->
+  <button class="back-to-top-btn" id="back-to-top-btn" title="ऊपर जाएं" aria-label="ऊपर जाएं">
+    <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
