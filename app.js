@@ -99,7 +99,7 @@ const NEWS_DATA = [
     author: "राजनीतिक विश्लेषक",
     date: "8 घंटे पहले",
     readTime: "5 मिनट",
-    image: "https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/05/02085707/AKHILESH-YADAV-768x432.webp",
+    image: "https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/05/02085707/AKHILESH-YADAV.webp",
     excerpt: "2027 के विधानसभा चुनाव को लेकर चल रही तमाम अटकलों पर विराम लगाते हुए चुनाव आयोग ने स्पष्ट किया है कि परिसीमन और जनगणना की प्रक्रिया का निर्धारित चुनावी कैलेंडर पर कोई प्रभाव नहीं पड़ेगा।",
     content: `
       <p><strong>लखनऊ:</strong> उत्तर प्रदेश विधानसभा चुनाव 2027 को लेकर राजनीतिक गलियारों में चल रही विभिन्न चर्चाओं के बीच चुनाव आयोग से जुड़े सूत्रों ने स्पष्ट किया है कि चुनाव तय समय पर ही संपन्न होंगे।</p>
@@ -133,7 +133,7 @@ const NEWS_DATA = [
     author: "संजय सिंह, वरिष्ठ संपादक",
     date: "12 घंटे पहले",
     readTime: "4 मिनट",
-    image: "https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/04/01191919/akshay_yadav-149x203.jpg",
+    image: "https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/04/01191919/akshay_yadav.jpg",
     excerpt: "उत्तर प्रदेश में खाली हो रही 10 राज्य सभा सीटों पर सियासी गणित गरमा गया है। दोनों ही खेमे छोटे दलों और निर्दलीय विधायकों को साधने की जुगत में लग गए हैं।",
     content: `
       <p><strong>लखनऊ:</strong> संसद के उच्च सदन राज्यसभा में उत्तर प्रदेश की 10 सीटें खाली हो रही हैं। विधायकों की संख्या बल के आधार पर भारतीय जनता पार्टी 7 और समाजवादी पार्टी 3 सीटें आसानी से जीत सकती हैं, लेकिन 10वीं सीट पर क्रॉस वोटिंग का खतरा बना हुआ है।</p>
@@ -168,7 +168,7 @@ const POLITICIANS_DATA = [
     party: "समाजवादी पार्टी",
     partyKey: "sp",
     constituency: "कन्नौज लोकसभा क्षेत्र",
-    photo: "https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/05/02085707/AKHILESH-YADAV-768x432.webp",
+    photo: "https://s3.ap-south-1.amazonaws.com/uttarpradesh.org/wp-content/uploads/2026/05/02085707/AKHILESH-YADAV.webp",
     bio: "उत्तर प्रदेश के पूर्व मुख्यमंत्री एवं वर्तमान में कन्नौज से लोकसभा सांसद। समाजवादी पार्टी के राष्ट्रीय अध्यक्ष के रूप में 'पीडीए' अभियान का नेतृत्व कर रहे हैं।"
   },
   {
@@ -177,7 +177,7 @@ const POLITICIANS_DATA = [
     party: "समाजवादी पार्टी",
     partyKey: "sp",
     constituency: "सैदपुर विधानसभा (गाजीपुर)",
-    photo: "https://www.uttarpradesh.org/wp-content/uploads/2025/09/MLA-अंकित-भारती-Ankit-Bharti-Samajwadi-Party-Saidpur-768x967.webp",
+    photo: "https://www.uttarpradesh.org/wp-content/uploads/2025/09/MLA-%E0%A4%85%E0%A4%82%E0%A4%95%E0%A4%BF%E0%A4%A4-%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80-Ankit-Bharti-Samajwadi-Party-Saidpur.webp",
     bio: "उत्तर प्रदेश की 18वीं विधानसभा के सबसे युवा विधायकों में से एक। गाजीपुर जनपद के सैदपुर सुरक्षित क्षेत्र से भारी मतों से निर्वाचित हुए।"
   },
   {
@@ -186,7 +186,7 @@ const POLITICIANS_DATA = [
     party: "भारतीय जनता पार्टी",
     partyKey: "bjp",
     constituency: "खलीलाबाद विधानसभा (संत कबीर नगर)",
-    photo: "https://www.uttarpradesh.org/wp-content/uploads/2025/09/MLA-अंकुर-राज-तिवारी-BJP-खलीलाबाद-विधानसभा-का-राजनीतिक-सफर-768x967.webp",
+    photo: "https://www.uttarpradesh.org/wp-content/uploads/2025/09/MLA-%E0%A4%85%E0%A4%82%E0%A4%95%E0%A5%81%E0%A4%B0-%E0%A4%B0%E0%A4%BE%E0%A4%9C-%E0%A4%A4%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80-BJP-%E0%A4%96%E0%A4%B2%E0%A5%80%E0%A4%B2%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%A6-%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A4%B8%E0%A4%AD%E0%A4%BE-%E0%A4%95%E0%A4%BE-%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF%E0%A4%95-%E0%A4%B8%E0%A4%AB%E0%A4%B0.webp",
     bio: "संत कबीर नगर जनपद के खलीलाबाद विधानसभा क्षेत्र से भाजपा के विधायक। युवा नेतृत्व और जमीनी जनसंपर्क के लिए जाने जाते हैं।"
   },
   {
@@ -231,8 +231,17 @@ const POLITICIANS_DATA = [
     party: "अपना दल (सोनेलाल)",
     partyKey: "bjp",
     constituency: "मिर्जापुर लोकसभा क्षेत्र",
-    photo: "https://www.uttarpradesh.org/wp-content/uploads/2025/08/mla03.jpeg",
+    photo: "https://www.uttarpradesh.org/wp-content/uploads/2025/08/MP07.jpg",
     bio: "अपना दल (एस) की राष्ट्रीय अध्यक्ष और मिर्जापुर से तीसरी बार सांसद। केंद्र सरकार में स्वास्थ्य एवं परिवार कल्याण राज्य मंत्री।"
+  },
+  {
+    name: "अखिलेश (Akhilesh)",
+    role: "वर्तमान विधायक (MLA)",
+    party: "समाजवादी पार्टी",
+    partyKey: "sp",
+    constituency: "मुबारकपुर विधानसभा (आजमगढ़)",
+    photo: "https://www.uttarpradesh.org/wp-content/uploads/2022/06/%E0%A4%86%E0%A4%9C%E0%A4%AE%E0%A4%97%E0%A4%A2%E0%A4%BC-%E0%A4%95%E0%A5%87-%E0%A4%AE%E0%A5%81%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A4%AA%E0%A5%81%E0%A4%B0-%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A4%B8%E0%A4%AD%E0%A4%BE-%E0%A4%B8%E0%A5%87-%E0%A4%B8%E0%A4%AE%E0%A4%BE%E0%A4%9C%E0%A4%B5%E0%A4%BE%E0%A4%A6%E0%A5%80-%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A5%80-MLA-Akhilesh-%E0%A4%95%E0%A4%BE-%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF%E0%A4%95-%E0%A4%B8%E0%A4%AB%E0%A4%B0.webp",
+    bio: "आजमगढ़ जनपद की मुबारकपुर विधानसभा सीट से समाजवादी पार्टी के विधायक। बुनकरों, किसानों व क्षेत्रीय विकास के लिए समर्पित जननेता।"
   }
 ];
 
@@ -441,7 +450,7 @@ function renderHeroSection() {
   mainCol.innerHTML = `
     <article class="hero-primary-card">
       <div class="hero-thumb-wrap" onclick="openArticleModal('${leadStory.id}')" style="cursor: pointer;">
-        <img src="${leadStory.image}" alt="${leadStory.title}" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
+        <img src="${leadStory.image}" alt="${leadStory.title}" loading="eager" decoding="async" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
         <span class="category-tag ${leadStory.categoryClass}" style="position: absolute; top: 12px; left: 12px;">${leadStory.category}</span>
       </div>
       <div class="hero-content-wrap">
@@ -466,7 +475,7 @@ function renderHeroSection() {
       ${subStories.map(sub => `
         <div class="horizontal-subcard" onclick="openArticleModal('${sub.id}')" style="cursor: pointer;">
           <div class="subcard-thumb">
-            <img src="${sub.image}" alt="${sub.title}" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
+            <img src="${sub.image}" alt="${sub.title}" loading="lazy" decoding="async" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
           </div>
           <div class="subcard-info">
             <div>
@@ -490,7 +499,7 @@ function renderHeroSection() {
     ${centerStories.map(cs => `
       <article class="vertical-story-card">
         <div class="vcard-thumb" onclick="openArticleModal('${cs.id}')" style="cursor: pointer;">
-          <img src="${cs.image}" alt="${cs.title}" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
+          <img src="${cs.image}" alt="${cs.title}" loading="lazy" decoding="async" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
           <span class="category-tag ${cs.categoryClass}" style="position: absolute; top: 10px; left: 10px;">${cs.category}</span>
         </div>
         <div class="post-meta">
@@ -547,7 +556,7 @@ function renderPoliticians(filter = 'all') {
   container.innerHTML = filtered.map(pol => `
     <div class="politician-card">
       <div class="politician-img-box">
-        <img src="${pol.photo}" alt="${pol.name}" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
+        <img src="${pol.photo}" alt="${pol.name}" loading="lazy" decoding="async" class="politician-avatar-img" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
         <span class="party-badge-floating party-${pol.partyKey}">${pol.party}</span>
       </div>
       <div class="politician-info">
@@ -575,7 +584,7 @@ function renderUPGroundReports() {
   container.innerHTML = articles.map(art => `
     <article class="quad-card">
       <div class="quad-thumb" onclick="openArticleModal('${art.id}')" style="cursor: pointer;">
-        <img src="${art.image}" alt="${art.title}" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
+        <img src="${art.image}" alt="${art.title}" loading="lazy" decoding="async" onerror="this.src='https://www.uttarpradesh.org/wp-content/uploads/2025/10/UP-ORG-LOGO.jpeg'">
         <span class="category-tag ${art.categoryClass}" style="position: absolute; top: 8px; left: 8px;">${art.category}</span>
       </div>
       <div class="post-meta">
@@ -602,7 +611,7 @@ function renderVideoLounge() {
 
   mainVideoContainer.innerHTML = `
     <div class="featured-video-player-card" onclick="openVideoPlayer('${leadVideo.id}')">
-      <img src="${leadVideo.thumb}" alt="${leadVideo.title}">
+      <img src="${leadVideo.thumb}" alt="${leadVideo.title}" loading="lazy" decoding="async">
       <div class="play-overlay-btn">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
       </div>
@@ -617,7 +626,7 @@ function renderVideoLounge() {
   playlistContainer.innerHTML = sideVideos.map(vid => `
     <div class="playlist-card" onclick="openVideoPlayer('${vid.id}')">
       <div class="playlist-thumb">
-        <img src="${vid.thumb}" alt="${vid.title}">
+        <img src="${vid.thumb}" alt="${vid.title}" loading="lazy" decoding="async">
         <span class="playlist-duration">${vid.duration}</span>
       </div>
       <div style="flex: 1;">

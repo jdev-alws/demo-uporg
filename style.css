@@ -24,6 +24,7 @@
   --accent-gold: #c9933e;
   --accent-blue: #1a56db;
 
+  
   --border-light: #e5e3dc;
   --border-dark: #252a36;
   --border-dash: #d6d3c8;
@@ -105,6 +106,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 button, input, select, textarea {
@@ -735,14 +737,16 @@ button, input, select, textarea {
   overflow: hidden;
   border-radius: var(--radius-sm);
   background: var(--bg-tertiary);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
 }
 
 .hero-thumb-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%; /* Preserves faces and heads in news photography */
   transition: transform 0.5s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .hero-primary-card:hover .hero-thumb-wrap img {
@@ -790,8 +794,8 @@ button, input, select, textarea {
 
 .subcard-thumb {
   flex-shrink: 0;
-  width: 105px;
-  height: 85px;
+  width: 110px;
+  height: 90px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--bg-tertiary);
@@ -801,7 +805,9 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 18%; /* Keeps faces framed in thumbnail */
   transition: transform 0.4s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .horizontal-subcard:hover .subcard-thumb img {
@@ -864,7 +870,9 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%; /* Preserves face & head */
   transition: transform 0.4s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .vertical-story-card:hover .vcard-thumb img {
@@ -1101,20 +1109,64 @@ button, input, select, textarea {
 
 .politician-img-box {
   position: relative;
-  aspect-ratio: 1 / 1.15;
+  aspect-ratio: 1 / 1.16;
   background: var(--bg-tertiary);
   overflow: hidden;
+  border-bottom: 2px solid var(--border-light);
 }
 
 .politician-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center; /* Head and face ALWAYS visible and never cropped! */
   transition: transform 0.4s ease;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Precision focal positioning for leaders' portraits */
+.politician-img-box img[src*="AKHILESH"],
+.politician-img-box img[alt*="अखिलेश"] {
+  object-position: 50% 12%;
+}
+
+.politician-img-box img[src*="MP07"],
+.politician-img-box img[alt*="अनुप्रिया"] {
+  object-position: center 10%;
+}
+
+.politician-img-box img[src*="atul-garg"],
+.politician-img-box img[alt*="अतुल"] {
+  object-position: center 12%;
+}
+
+.politician-img-box img[src*="akshay_yadav"],
+.politician-img-box img[alt*="अक्षय"] {
+  object-position: center 14%;
+}
+
+.politician-img-box img[src*="LODHI"],
+.politician-img-box img[alt*="लोधी"] {
+  object-position: center 14%;
+}
+
+.politician-img-box img[src*="Ajay-Singh"],
+.politician-img-box img[alt*="अजय"] {
+  object-position: center 10%;
+}
+
+.politician-img-box img[src*="Ankit-Bharti"],
+.politician-img-box img[alt*="अंकित"] {
+  object-position: top center;
+}
+
+.politician-img-box img[src*="Ankur-Raj"],
+.politician-img-box img[alt*="अंकुर"] {
+  object-position: top center;
 }
 
 .politician-card:hover .politician-img-box img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .party-badge-floating {
@@ -1232,7 +1284,9 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.4s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .quad-card:hover .quad-thumb img {
@@ -1293,12 +1347,14 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.85;
+  object-position: center 25%;
+  opacity: 0.88;
   transition: opacity 0.3s ease, transform 0.5s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .featured-video-player-card:hover img {
-  opacity: 0.95;
+  opacity: 0.96;
   transform: scale(1.03);
 }
 
@@ -1384,6 +1440,8 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .playlist-duration {
@@ -1509,7 +1567,9 @@ button, input, select, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.4s ease;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .special-lead-card:hover .special-lead-thumb img {
@@ -1858,8 +1918,10 @@ button, input, select, textarea {
   width: 100%;
   border-radius: var(--radius-md);
   margin: 20px 0;
-  max-height: 420px;
+  max-height: 480px;
   object-fit: cover;
+  object-position: center 20%;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .reader-body-text {
@@ -2006,17 +2068,29 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints & Mobile Optimization System
    ========================================================================== */
+
+/* Tablet Landscape & Medium Desktops (<= 1024px) */
 @media (max-width: 1024px) {
+  :root {
+    --header-height: 66px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
   .hero-newspaper-grid {
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 56% 44%;
+    gap: 20px;
   }
 
   .hero-col-trending {
     grid-column: span 2;
     border-top: 1px solid var(--border-light);
     padding-top: 24px;
+    margin-top: 10px;
   }
 
   .hero-col-center {
@@ -2032,18 +2106,22 @@ button, input, select, textarea {
 
   .politician-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   .quad-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   .video-lounge-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .header-nav {
@@ -2051,11 +2129,22 @@ button, input, select, textarea {
   }
 }
 
+/* Tablet Portrait & Large Phones (<= 768px) */
 @media (max-width: 768px) {
   :root {
-    --header-height: 60px;
+    --header-height: 58px;
+    --topbar-height: 32px;
   }
 
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  /* Utility Top Bar */
   .top-bar-left .top-location-date {
     display: none;
   }
@@ -2064,39 +2153,213 @@ button, input, select, textarea {
     display: none;
   }
 
+  .top-bar-inner {
+    justify-content: space-between;
+  }
+
+  /* Header Optimization */
+  .header-inner {
+    height: var(--header-height);
+  }
+
+  .brand-logo {
+    height: 38px;
+    max-width: 140px;
+  }
+
+  .header-left {
+    gap: 8px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .newsletter-pill-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .newsletter-pill-btn span {
+    display: none;
+  }
+
+  /* Category Subnav Touch Slider */
+  .category-subnav {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .subnav-list {
+    gap: 16px;
+    padding: 8px 14px;
+  }
+
+  .subnav-item a {
+    font-size: 0.8125rem;
+  }
+
+  /* Hero Section Stacking */
   .hero-newspaper-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-headline {
+    font-size: 1.35rem;
+    line-height: 1.35;
   }
 
   .hero-col-center {
     border-left: none;
     border-right: none;
-    padding: 0;
+    border-top: 1px solid var(--border-light);
+    padding: 20px 0 0;
   }
 
   .hero-subcards-row {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .subcard-thumb {
+    width: 100px;
+    height: 80px;
   }
 
   .trending-list {
     grid-template-columns: 1fr;
   }
 
+  /* Filter Tabs Bar */
+  .tab-filter-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+
+  .filter-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+
+  /* Politician Cards Grid */
   .politician-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
+  .politician-img-box {
+    aspect-ratio: 1 / 1.15;
+  }
+
+  .politician-name {
+    font-size: 0.95rem;
+  }
+
+  .politician-role {
+    font-size: 0.75rem;
+  }
+
+  .politician-constituency {
+    font-size: 0.75rem;
+  }
+
+  .profile-link-btn {
+    font-size: 0.78rem;
+    padding: 7px 0;
+  }
+
+  /* Quad Grid */
+  .quad-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Spotlight Banner */
+  .spotlight-quote {
+    font-size: 1.35rem;
+  }
+
+  .spotlight-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Video Lounge */
+  .video-lounge-section {
+    padding: 32px 0;
+    margin: 28px 0;
+  }
+
+  .video-card-overlay-info {
+    padding: 16px;
+  }
+
+  .video-card-overlay-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .playlist-thumb {
+    width: 95px;
+    height: 65px;
+  }
+
+  .playlist-title {
+    font-size: 0.8125rem;
+  }
+
+  /* Split Layouts (Panchayat & Special Reports) */
   .panchayat-special-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
+  .voter-stat-row {
+    padding: 10px 14px;
+  }
+
+  .voter-title-text {
+    font-size: 0.875rem;
+  }
+
+  .count-number {
+    font-size: 0.95rem;
+  }
+
+  /* Newsletter Form */
   .newsletter-form {
     flex-direction: column;
     width: 100%;
   }
 
+  .newsletter-btn {
+    width: 100%;
+  }
+
+  /* Footers */
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .footer-bottom {
@@ -2105,21 +2368,98 @@ button, input, select, textarea {
     text-align: center;
   }
 
+  /* Reader Modal */
+  .modal-box {
+    width: 95%;
+    max-height: 92vh;
+    margin: 15px auto;
+  }
+
   .reader-scrollable {
-    padding: 20px;
+    padding: 20px 16px;
   }
 
   .reader-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+  }
+
+  .reader-featured-img {
+    max-height: 320px;
+    margin: 14px 0;
+  }
+
+  .reader-body-text {
+    font-size: 0.9375rem;
   }
 }
 
+/* Mobile Phones (<= 480px) */
 @media (max-width: 480px) {
-  .politician-grid {
-    grid-template-columns: 1fr;
+  :root {
+    --header-height: 54px;
   }
 
-  .quad-grid {
+  .container {
+    padding: 0 12px;
+  }
+
+  .brand-logo {
+    height: 32px;
+    max-width: 120px;
+  }
+
+  .newsletter-pill-btn {
+    display: none;
+  }
+
+  .header-right {
+    gap: 4px;
+  }
+
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ticker-badge {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .ticker-controls {
+    display: none;
+  }
+
+  .hero-headline {
+    font-size: 1.18rem;
+    line-height: 1.35;
+  }
+
+  .hero-excerpt {
+    font-size: 0.8125rem;
+    -webkit-line-clamp: 2;
+  }
+
+  /* Politician Grid on Small Phones */
+  .politician-grid {
     grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .politician-img-box {
+    aspect-ratio: 1 / 1.15;
+  }
+
+  .spotlight-quote {
+    font-size: 1.2rem;
+  }
+
+  .toast-msg {
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    padding: 10px 16px;
   }
 }
